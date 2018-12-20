@@ -43,7 +43,7 @@ const woman = {
   saying: 'Hin chao!',
   friends:[cat]
 };
-const cat-woman = {
+const catWoman = {
   species:'human',
   name: 'Kate',
   gender: 'female',
@@ -81,3 +81,7 @@ function getStrFromObj(obj) {
   });
   return arr.join('; ');
 }
+
+[dog, cat, man, woman, catWoman].forEach((hab) => {
+  print(getStrFromObj(hab));
+})
