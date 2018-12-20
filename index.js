@@ -70,3 +70,14 @@ const cat-woman = {
    print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny');
    print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny', 'div');
    */
+function getStrFromObj(obj) {
+  let arr = [];
+  Object.values(obj).forEach((item) => {
+    if (Array.isArray(item)) {
+      arr.push(item.join(', '));
+    }else{
+      arr.push(item);
+    }
+  });
+  return arr.join('; ');
+}
