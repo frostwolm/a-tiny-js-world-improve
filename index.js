@@ -14,7 +14,7 @@ const dog = {
   legs: 4,
   hands: 0,
   saying: 'woof-woof!',
-  friends:[cat, man]
+  friends:[]
 };
 const cat = {
   species:'cat',
@@ -23,7 +23,7 @@ const cat = {
   legs: 4,
   hands: 0,
   saying: 'meow!',
-  friends:[dog, woman];
+  friends:[]
 };
 const man = {
   species:'human',
@@ -32,7 +32,7 @@ const man = {
   legs: 2,
   hands: 2,
   saying: 'Good Morning, Vietnam!',
-  friends:[dog]
+  friends:[]
 };
 const woman = {
   species:'human',
@@ -41,7 +41,7 @@ const woman = {
   legs: 2,
   hands: 2,
   saying: 'Hin chao!',
-  friends:[cat]
+  friends:[]
 };
 const catWoman = {
   species:'human',
@@ -52,6 +52,12 @@ const catWoman = {
   saying: cat.saying,
   friends:[]
 };
+
+dog.friends.push(cat, man);
+cat.friends.push(dog, catWoman);
+man.friends.push(dog, woman);
+woman.friends.push(man);
+catWoman.friends.push(cat);
 // ======== OUTPUT ========
 /* Use print(message) for output.
    Default tag for message is <pre>. Use print(message,'div') to change containing element tag.
@@ -74,7 +80,11 @@ function getStrFromObj(obj) {
   let arr = [];
   Object.values(obj).forEach((item) => {
     if (Array.isArray(item)) {
-      arr.push(item.join(', '));
+      let names = [];
+      item.forEach((frnd) => {
+        names.push(frnd.name);
+      });
+      arr.push(names.join(', '));
     }else{
       arr.push(item);
     }
