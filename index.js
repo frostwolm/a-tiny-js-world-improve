@@ -36,20 +36,20 @@ class Animal extends Inhabitant {
   }
   toString(){
     let str = super.toString().split('; ');
-    str.splice(4, 0, this.legs);
+    str.splice(4, 0, this.legs, 0);
     return str.join('; ') + '; ';
   }
 }
 
 class Man extends Human {
   constructor(name, saying) {
-      super('human', name, 'male', saying);
+      super(name, 'male', saying);
   }
 }
 
 class Woman extends Human {
   constructor(name, saying) {
-      super('human', name, 'female', saying);
+      super(name, 'female', saying);
   }
 }
 
@@ -67,7 +67,7 @@ class Dog extends Animal {
 
 class CatWoman extends Human {
   constructor(name, saying) {
-      super('human', name, 'female', saying);
+      super(name, 'female', saying);
   }
 }
 
