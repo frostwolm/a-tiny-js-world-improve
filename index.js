@@ -12,7 +12,7 @@ class Inhabitant {
     return this;
   }
   toString(){
-    return [this.species, this.name, this.gender, this.legs, this.hands, this.saying, this.friends.map(friend => friend.name).join(', ')].join ('; ') + '; ';
+    return [this.species, this.name, this.gender, this.saying, this.friends.map(friend => friend.name).join(', ')].join ('; ') + '; ';
   }
 }
 
