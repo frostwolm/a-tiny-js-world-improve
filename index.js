@@ -23,20 +23,21 @@ class Human extends Inhabitant {
     this.hands = hands;
   }
   toString(){
-    str = super.toString().split('; ');
-    str.splice(4, 0, legs, hands);
-    return str.join('; ');
+    let str = super.toString().split('; ');
+    str.splice(4, 0, this.legs, this.hands);
+    return str.join('; ') + '; ';
   }
 }
 
 class Animal extends Inhabitant {
   constructor(species, name, gender, saying, legs = 4) {
-    super(species, name, gender, saying, legs);
+    super(species, name, gender, saying);
+    this.legs = legs;
   }
   toString(){
-    str = super.toString().split('; ');
-    str.splice(4, 0, legs);
-    return str.join('; ');
+    let str = super.toString().split('; ');
+    str.splice(4, 0, this.legs);
+    return str.join('; ') + '; ';
   }
 }
 
