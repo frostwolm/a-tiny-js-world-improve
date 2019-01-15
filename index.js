@@ -79,7 +79,7 @@ class World {
     return this;
   }
   toString(){
-    return this.habbitants.map(hab => print(hab)).join('\n');
+    return this.habbitants.join('\n');
   }
 }
 
