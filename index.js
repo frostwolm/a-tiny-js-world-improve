@@ -71,8 +71,8 @@ class CatWoman extends Human {
 }
 
 class World {
-  constructor() {
-    this.habbitants = Array.from(arguments);
+  constructor(...habs) {
+    this.habbitants = habs;
   }
   addHabbitant(hab){
     this.habbitants.push(hab);
