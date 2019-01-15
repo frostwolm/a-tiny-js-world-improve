@@ -1,11 +1,9 @@
 class Inhabitant {
-  constructor(species, name, gender, saying, legs, hands) {
+  constructor(species, name, gender, saying) {
     this.species = species;
     this.name = name;
     this.gender = gender;
     this.saying = saying;
-    this.legs = legs;
-    this.hands = hands;
     this.friends = [];
   }
   addFriend(friend){
